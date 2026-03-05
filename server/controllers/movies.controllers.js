@@ -1,0 +1,12 @@
+import moviesData from '../data/movies.json' with {type: 'json'}
+
+
+export const getMovies = (req, res) => {
+    try {
+
+        res.json({ movies: moviesData })
+    } catch (error) {
+        console.log("Error in getMovies controllers", error.message);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
