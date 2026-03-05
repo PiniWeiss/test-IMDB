@@ -1,8 +1,9 @@
-import { Navigate, Route, Routes } from "react-router";
+import {  Route, Routes } from "react-router";
 import './App.css'
 import Home from "./pages/Home";
-import Movies from "./pages/Movies";
+
 import Seats from "./pages/Seats";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
 
@@ -10,8 +11,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/movies" element={<Movies/>} />
-        <Route path="/seats" element={<Seats/>} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/seats/:id" element={<Seats />} />
       </Routes>
     </>
   )

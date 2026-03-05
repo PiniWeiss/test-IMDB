@@ -1,12 +1,12 @@
 import express from "express";
-
+import cors from "cors"
 import moviesRoures from "./routes/movies.routes.js";
 
 
 const app = express();
 const PORT = 5000;
 
-
+app.use(cors())
 app.use(express.json())
 
 
